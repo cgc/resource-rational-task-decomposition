@@ -1,0 +1,14 @@
+2021-03-08-design-value
+graph_cache
+*results.bin
+
+experiment/analyze/figures-*/
+figures/
+journal/figures/
+cache_run_models-v2-withsucc/
+cache_run_models-v2/
+
+__pycache__
+
+*models.bin
+

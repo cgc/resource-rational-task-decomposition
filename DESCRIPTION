@@ -1,0 +1,3 @@
+Package: rrtd
+Version: 1.0.0
+Imports: lmtest, mlogit, igraph

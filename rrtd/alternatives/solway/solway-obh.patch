@@ -1,0 +1,14 @@
+diff --git a/optimal_options.R b/optimal_options.R
+index 578e112..e43d87a 100644
+--- a/optimal_options.R
++++ b/optimal_options.R
+@@ -49,7 +49,8 @@ get_random_consistent_shortest_paths <- function(flat_G)
+         }
+     }
+ 
+-    shortest_paths
++    # we add the MDP with noisey edge weights to ensure it isn't garbage-collected.
++    list(flat_G=flat_G, shortest_paths=shortest_paths)
+ }
+ 
+ options_model_selection_objective <- function(flat_G, membership, data)

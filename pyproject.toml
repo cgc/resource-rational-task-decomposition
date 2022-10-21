@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS"
+addopts = """
+--ignore-glob=**/joblib/**
+--ignore-glob=**/alternatives/*/**
+--doctest-modules
+--doctest-ignore-import-errors
+"""
+markers = [
+    "integrationtest: marks tests that are slower but more extensively test results (deselect with '-m \"not integrationtest\"')",
+    "integrationtest",
+]
