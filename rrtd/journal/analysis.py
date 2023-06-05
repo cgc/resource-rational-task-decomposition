@@ -8,6 +8,13 @@ sys.path.append('../experiment/analyze')
 import analyze_v1_11_tools as tools1_11
 
 
+def set_mpl_style():
+    # Look at $PIP_ENV/lib/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle
+    import matplotlib.pyplot as plt
+    plt.rcParams['font.family'] = 'Arial'
+    # This is the default for jupyter figures -- but not in classic.mplstyle, so not sure where it comes from?
+    plt.rcParams['font.size'] = 10
+
 def pvalue(pv):
     return f'p {tools1_11.apa_pval(pv)}'
 
